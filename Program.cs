@@ -1,3 +1,5 @@
+using Supermarket_MVP.Views;
+
 namespace Supermarket_MVP
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace Supermarket_MVP
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new PayModeView());
         }
     }
 }
