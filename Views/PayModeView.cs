@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace Supermarket_MVP.Views
             InitializeComponent();
             AssociateAndRaiseViewEvents();
             tabControl1.TabPages.Remove(tabPagePayModeDetail);
+            BtnClose.Click += delegate { this.Close(); };
         }
 
         private void AssociateAndRaiseViewEvents()
@@ -88,11 +90,14 @@ namespace Supermarket_MVP.Views
             DgPayMode.DataSource = payModeList;
         }
         private static PayModeView instance;
-        public static PayModeView GetInstance()
+        public static PayModeView GetInstance(Form parentContainer)
         {
             if (instance == null || instance.IsDisposed)
             {
                 instance = new PayModeView();
+                instance.MdiParent = parentContainer;
+                instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
             }
             else
             {

@@ -119,6 +119,8 @@
             // 
             // BtnClose
             // 
+            BtnClose.AccessibleRole = AccessibleRole.None;
+            BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnClose.Image = Properties.Resources.cerrar;
             BtnClose.Location = new Point(696, 236);
             BtnClose.Name = "BtnClose";
@@ -128,6 +130,8 @@
             // 
             // BtnDelete
             // 
+            BtnDelete.AccessibleRole = AccessibleRole.None;
+            BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnDelete.Image = Properties.Resources.delete;
             BtnDelete.Location = new Point(696, 177);
             BtnDelete.Name = "BtnDelete";
@@ -137,6 +141,8 @@
             // 
             // BtnEdit
             // 
+            BtnEdit.AccessibleRole = AccessibleRole.None;
+            BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnEdit.Image = Properties.Resources.edit;
             BtnEdit.Location = new Point(696, 118);
             BtnEdit.Name = "BtnEdit";
@@ -146,6 +152,8 @@
             // 
             // BtnNew
             // 
+            BtnNew.AccessibleRole = AccessibleRole.None;
+            BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnNew.Image = Properties.Resources._new;
             BtnNew.Location = new Point(696, 59);
             BtnNew.Name = "BtnNew";
@@ -157,6 +165,7 @@
             // 
             DgPayMode.AllowUserToAddRows = false;
             DgPayMode.AllowUserToDeleteRows = false;
+            DgPayMode.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             DgPayMode.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgPayMode.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DgPayMode.Location = new Point(8, 59);
@@ -286,6 +295,7 @@
             // 
             // PayModeView
             // 
+            AccessibleRole = AccessibleRole.None;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 469);
