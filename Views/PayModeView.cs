@@ -54,18 +54,18 @@ namespace Supermarket_MVP.Views
             BtnSave.Click += delegate
             {
                 SaveEvent?.Invoke(this, EventArgs.Empty);
-                if (isSuccessful)
+                if (isSuccessful) // Si grabar fue exitoso
                 {
-                    tabControl1.TabPages.Remove(tabPagePayModeList);
-                    tabControl1.TabPages.Add(tabPagePayModeDetail);
+                    tabControl1.TabPages.Remove(tabPagePayModeDetail);
+                    tabControl1.TabPages.Add(tabPagePayModeList);
                 }
                 MessageBox.Show(Message);
             };
             BtnCancel.Click += delegate
             {
                 CancelEvent?.Invoke(this, EventArgs.Empty);
-                tabControl1.TabPages.Remove(tabPagePayModeList);
-                tabControl1.TabPages.Add(tabPagePayModeDetail);
+                tabControl1.TabPages.Remove(tabPagePayModeDetail);
+                tabControl1.TabPages.Add(tabPagePayModeList);
             };
             BtnDelete.Click += delegate
             {
