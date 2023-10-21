@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.Data;
 
 namespace Supermarket_MVP.Views
 {
@@ -21,7 +23,7 @@ namespace Supermarket_MVP.Views
         event EventHandler DeleteEvent;
         event EventHandler SaveEvent;
         event EventHandler CancelEvent;
-        void SatCategoriesListBildingSource(BindingSource categoriesList);
+        void SetCategoriesListBildingSource(BindingSource categoriesList);
         void Show();
     }
 }

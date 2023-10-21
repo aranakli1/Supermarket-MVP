@@ -76,7 +76,7 @@ namespace Supermarket_MVP.Views
         public event EventHandler SaveEvent;
         public event EventHandler CancelEvent;
 
-        public void SatCategoriesListBildingSource(BindingSource categoriesList)
+        public void SetCategoriesListBildingSource(BindingSource categoriesList)
         {
             DgCategories.DataSource = categoriesList;
         }
