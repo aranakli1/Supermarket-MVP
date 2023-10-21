@@ -29,33 +29,33 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            label1 = new Label();
             pictureBox1 = new PictureBox();
+            label1 = new Label();
             label2 = new Label();
-            textSearch = new TextBox();
+            TxtSearch = new TextBox();
             tabControl1 = new TabControl();
             tabPageCategoriesList = new TabPage();
-            tabPageCategoriesDetail = new TabPage();
-            BtnSearch = new Button();
-            DgCategories = new DataGridView();
             BtnClose = new Button();
             BtnDelete = new Button();
             BtnEdit = new Button();
             BtnNew = new Button();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            TxtCategoryId = new TextBox();
-            TxtCategoryName = new TextBox();
-            TxtCategoryDescription = new TextBox();
+            DgCategories = new DataGridView();
+            BtnSearch = new Button();
+            tabPageCategoriesDetail = new TabPage();
             BtnCancel = new Button();
             BtnSave = new Button();
+            TxtCategoryDescription = new TextBox();
+            TxtCategoryName = new TextBox();
+            TxtCategoryId = new TextBox();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
             tabPageCategoriesList.SuspendLayout();
-            tabPageCategoriesDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DgCategories).BeginInit();
+            tabPageCategoriesDetail.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -68,16 +68,6 @@
             panel1.Size = new Size(800, 125);
             panel1.TabIndex = 0;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(157, 39);
-            label1.Name = "label1";
-            label1.Size = new Size(197, 41);
-            label1.TabIndex = 0;
-            label1.Text = "CATEGORIES";
-            // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Categories;
@@ -87,6 +77,16 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(157, 39);
+            label1.Name = "label1";
+            label1.Size = new Size(197, 41);
+            label1.TabIndex = 0;
+            label1.Text = "CATEGORIES";
             // 
             // label2
             // 
@@ -98,13 +98,13 @@
             label2.TabIndex = 1;
             label2.Text = "Search Category";
             // 
-            // textSearch
+            // TxtSearch
             // 
-            textSearch.Location = new Point(3, 26);
-            textSearch.Name = "textSearch";
-            textSearch.PlaceholderText = "Data to search";
-            textSearch.Size = new Size(641, 27);
-            textSearch.TabIndex = 2;
+            TxtSearch.Location = new Point(3, 26);
+            TxtSearch.Name = "TxtSearch";
+            TxtSearch.PlaceholderText = "Data to search";
+            TxtSearch.Size = new Size(641, 27);
+            TxtSearch.TabIndex = 2;
             // 
             // tabControl1
             // 
@@ -125,7 +125,7 @@
             tabPageCategoriesList.Controls.Add(BtnNew);
             tabPageCategoriesList.Controls.Add(DgCategories);
             tabPageCategoriesList.Controls.Add(BtnSearch);
-            tabPageCategoriesList.Controls.Add(textSearch);
+            tabPageCategoriesList.Controls.Add(TxtSearch);
             tabPageCategoriesList.Controls.Add(label2);
             tabPageCategoriesList.Location = new Point(4, 29);
             tabPageCategoriesList.Name = "tabPageCategoriesList";
@@ -134,47 +134,6 @@
             tabPageCategoriesList.TabIndex = 0;
             tabPageCategoriesList.Text = "Categories List";
             tabPageCategoriesList.UseVisualStyleBackColor = true;
-            // 
-            // tabPageCategoriesDetail
-            // 
-            tabPageCategoriesDetail.Controls.Add(BtnCancel);
-            tabPageCategoriesDetail.Controls.Add(BtnSave);
-            tabPageCategoriesDetail.Controls.Add(TxtCategoryDescription);
-            tabPageCategoriesDetail.Controls.Add(TxtCategoryName);
-            tabPageCategoriesDetail.Controls.Add(TxtCategoryId);
-            tabPageCategoriesDetail.Controls.Add(label5);
-            tabPageCategoriesDetail.Controls.Add(label4);
-            tabPageCategoriesDetail.Controls.Add(label3);
-            tabPageCategoriesDetail.Location = new Point(4, 29);
-            tabPageCategoriesDetail.Name = "tabPageCategoriesDetail";
-            tabPageCategoriesDetail.Padding = new Padding(3);
-            tabPageCategoriesDetail.Size = new Size(792, 305);
-            tabPageCategoriesDetail.TabIndex = 1;
-            tabPageCategoriesDetail.Text = "Categories Detail";
-            tabPageCategoriesDetail.UseVisualStyleBackColor = true;
-            // 
-            // BtnSearch
-            // 
-            BtnSearch.BackgroundImage = Properties.Resources.search_small;
-            BtnSearch.BackgroundImageLayout = ImageLayout.Zoom;
-            BtnSearch.Location = new Point(650, 22);
-            BtnSearch.Name = "BtnSearch";
-            BtnSearch.Size = new Size(40, 35);
-            BtnSearch.TabIndex = 3;
-            BtnSearch.UseVisualStyleBackColor = true;
-            // 
-            // DgCategories
-            // 
-            DgCategories.AllowUserToAddRows = false;
-            DgCategories.AllowUserToDeleteRows = false;
-            DgCategories.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DgCategories.Location = new Point(3, 59);
-            DgCategories.Name = "DgCategories";
-            DgCategories.ReadOnly = true;
-            DgCategories.RowHeadersWidth = 51;
-            DgCategories.RowTemplate.Height = 29;
-            DgCategories.Size = new Size(687, 238);
-            DgCategories.TabIndex = 4;
             // 
             // BtnClose
             // 
@@ -220,58 +179,46 @@
             BtnNew.TabIndex = 8;
             BtnNew.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // DgCategories
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(6, 3);
-            label3.Name = "label3";
-            label3.Size = new Size(91, 20);
-            label3.TabIndex = 0;
-            label3.Text = "Category Id";
+            DgCategories.AllowUserToAddRows = false;
+            DgCategories.AllowUserToDeleteRows = false;
+            DgCategories.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DgCategories.Location = new Point(3, 59);
+            DgCategories.Name = "DgCategories";
+            DgCategories.ReadOnly = true;
+            DgCategories.RowHeadersWidth = 51;
+            DgCategories.RowTemplate.Height = 29;
+            DgCategories.Size = new Size(687, 238);
+            DgCategories.TabIndex = 4;
             // 
-            // label4
+            // BtnSearch
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(8, 66);
-            label4.Name = "label4";
-            label4.Size = new Size(119, 20);
-            label4.TabIndex = 1;
-            label4.Text = "Category Name";
+            BtnSearch.BackgroundImage = Properties.Resources.search_small;
+            BtnSearch.BackgroundImageLayout = ImageLayout.Zoom;
+            BtnSearch.Location = new Point(650, 22);
+            BtnSearch.Name = "BtnSearch";
+            BtnSearch.Size = new Size(40, 35);
+            BtnSearch.TabIndex = 3;
+            BtnSearch.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // tabPageCategoriesDetail
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(8, 130);
-            label5.Name = "label5";
-            label5.Size = new Size(157, 20);
-            label5.TabIndex = 2;
-            label5.Text = "Category Description";
-            // 
-            // TxtCategoryId
-            // 
-            TxtCategoryId.Location = new Point(6, 26);
-            TxtCategoryId.Name = "TxtCategoryId";
-            TxtCategoryId.Size = new Size(125, 27);
-            TxtCategoryId.TabIndex = 3;
-            // 
-            // TxtCategoryName
-            // 
-            TxtCategoryName.Location = new Point(8, 89);
-            TxtCategoryName.Name = "TxtCategoryName";
-            TxtCategoryName.PlaceholderText = "Category Name";
-            TxtCategoryName.Size = new Size(228, 27);
-            TxtCategoryName.TabIndex = 4;
-            // 
-            // TxtCategoryDescription
-            // 
-            TxtCategoryDescription.Location = new Point(8, 153);
-            TxtCategoryDescription.Name = "TxtCategoryDescription";
-            TxtCategoryDescription.PlaceholderText = "Category Description";
-            TxtCategoryDescription.Size = new Size(365, 27);
-            TxtCategoryDescription.TabIndex = 5;
+            tabPageCategoriesDetail.Controls.Add(BtnCancel);
+            tabPageCategoriesDetail.Controls.Add(BtnSave);
+            tabPageCategoriesDetail.Controls.Add(TxtCategoryDescription);
+            tabPageCategoriesDetail.Controls.Add(TxtCategoryName);
+            tabPageCategoriesDetail.Controls.Add(TxtCategoryId);
+            tabPageCategoriesDetail.Controls.Add(label5);
+            tabPageCategoriesDetail.Controls.Add(label4);
+            tabPageCategoriesDetail.Controls.Add(label3);
+            tabPageCategoriesDetail.Location = new Point(4, 29);
+            tabPageCategoriesDetail.Name = "tabPageCategoriesDetail";
+            tabPageCategoriesDetail.Padding = new Padding(3);
+            tabPageCategoriesDetail.Size = new Size(792, 305);
+            tabPageCategoriesDetail.TabIndex = 1;
+            tabPageCategoriesDetail.Text = "Categories Detail";
+            tabPageCategoriesDetail.UseVisualStyleBackColor = true;
             // 
             // BtnCancel
             // 
@@ -291,6 +238,59 @@
             BtnSave.TabIndex = 8;
             BtnSave.UseVisualStyleBackColor = true;
             // 
+            // TxtCategoryDescription
+            // 
+            TxtCategoryDescription.Location = new Point(8, 153);
+            TxtCategoryDescription.Name = "TxtCategoryDescription";
+            TxtCategoryDescription.PlaceholderText = "Category Description";
+            TxtCategoryDescription.Size = new Size(365, 27);
+            TxtCategoryDescription.TabIndex = 5;
+            // 
+            // TxtCategoryName
+            // 
+            TxtCategoryName.Location = new Point(8, 89);
+            TxtCategoryName.Name = "TxtCategoryName";
+            TxtCategoryName.PlaceholderText = "Category Name";
+            TxtCategoryName.Size = new Size(228, 27);
+            TxtCategoryName.TabIndex = 4;
+            // 
+            // TxtCategoryId
+            // 
+            TxtCategoryId.Location = new Point(6, 26);
+            TxtCategoryId.Name = "TxtCategoryId";
+            TxtCategoryId.Size = new Size(125, 27);
+            TxtCategoryId.TabIndex = 3;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(8, 130);
+            label5.Name = "label5";
+            label5.Size = new Size(157, 20);
+            label5.TabIndex = 2;
+            label5.Text = "Category Description";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(8, 66);
+            label4.Name = "label4";
+            label4.Size = new Size(119, 20);
+            label4.TabIndex = 1;
+            label4.Text = "Category Name";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(6, 3);
+            label3.Name = "label3";
+            label3.Size = new Size(91, 20);
+            label3.TabIndex = 0;
+            label3.Text = "Category Id";
+            // 
             // CategoriesView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -306,9 +306,9 @@
             tabControl1.ResumeLayout(false);
             tabPageCategoriesList.ResumeLayout(false);
             tabPageCategoriesList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)DgCategories).EndInit();
             tabPageCategoriesDetail.ResumeLayout(false);
             tabPageCategoriesDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)DgCategories).EndInit();
             ResumeLayout(false);
         }
 
@@ -318,7 +318,7 @@
         private PictureBox pictureBox1;
         private Label label1;
         private Label label2;
-        private TextBox textSearch;
+        private TextBox TxtSearch;
         private TabControl tabControl1;
         private TabPage tabPageCategoriesList;
         private TabPage tabPageCategoriesDetail;

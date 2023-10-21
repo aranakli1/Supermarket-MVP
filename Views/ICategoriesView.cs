@@ -16,7 +16,7 @@ namespace Supermarket_MVP.Views
         bool IsSuccessful { get; set; }
         string Message { get; set; }
         event EventHandler SearchEvent;
-        event EventHandler AddEvent;
+        event EventHandler AddNewEvent;
         event EventHandler EditEvent;
         event EventHandler DeleteEvent;
         event EventHandler SaveEvent;
