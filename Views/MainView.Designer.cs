@@ -29,15 +29,24 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            BtnCategories = new PictureBox();
+            BtnExit = new Button();
             BtnPayMode = new Button();
             pictureBox1 = new PictureBox();
-            BtnExit = new Button();
+            BtnProducts = new PictureBox();
+            BtnProviders = new PictureBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)BtnCategories).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)BtnProducts).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)BtnProviders).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(BtnProviders);
+            panel1.Controls.Add(BtnProducts);
+            panel1.Controls.Add(BtnCategories);
             panel1.Controls.Add(BtnExit);
             panel1.Controls.Add(BtnPayMode);
             panel1.Controls.Add(pictureBox1);
@@ -46,6 +55,27 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(143, 450);
             panel1.TabIndex = 0;
+            // 
+            // BtnCategories
+            // 
+            BtnCategories.BackgroundImage = Properties.Resources.Categories;
+            BtnCategories.BackgroundImageLayout = ImageLayout.Zoom;
+            BtnCategories.Location = new Point(3, 139);
+            BtnCategories.Name = "BtnCategories";
+            BtnCategories.Size = new Size(125, 62);
+            BtnCategories.TabIndex = 2;
+            BtnCategories.TabStop = false;
+            // 
+            // BtnExit
+            // 
+            BtnExit.BackgroundImage = Properties.Resources.exit512;
+            BtnExit.BackgroundImageLayout = ImageLayout.Zoom;
+            BtnExit.Dock = DockStyle.Bottom;
+            BtnExit.Location = new Point(0, 388);
+            BtnExit.Name = "BtnExit";
+            BtnExit.Size = new Size(143, 62);
+            BtnExit.TabIndex = 2;
+            BtnExit.UseVisualStyleBackColor = true;
             // 
             // BtnPayMode
             // 
@@ -67,16 +97,25 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
-            // BtnExit
+            // BtnProducts
             // 
-            BtnExit.BackgroundImage = Properties.Resources.exit512;
-            BtnExit.BackgroundImageLayout = ImageLayout.Zoom;
-            BtnExit.Dock = DockStyle.Bottom;
-            BtnExit.Location = new Point(0, 388);
-            BtnExit.Name = "BtnExit";
-            BtnExit.Size = new Size(143, 62);
-            BtnExit.TabIndex = 2;
-            BtnExit.UseVisualStyleBackColor = true;
+            BtnProducts.BackgroundImage = Properties.Resources.products;
+            BtnProducts.BackgroundImageLayout = ImageLayout.Zoom;
+            BtnProducts.Location = new Point(3, 207);
+            BtnProducts.Name = "BtnProducts";
+            BtnProducts.Size = new Size(125, 62);
+            BtnProducts.TabIndex = 2;
+            BtnProducts.TabStop = false;
+            // 
+            // BtnProviders
+            // 
+            BtnProviders.BackgroundImage = Properties.Resources.providers;
+            BtnProviders.BackgroundImageLayout = ImageLayout.Zoom;
+            BtnProviders.Location = new Point(3, 275);
+            BtnProviders.Name = "BtnProviders";
+            BtnProviders.Size = new Size(125, 62);
+            BtnProviders.TabIndex = 2;
+            BtnProviders.TabStop = false;
             // 
             // MainView
             // 
@@ -89,7 +128,10 @@
             Text = "Supermarket ";
             WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)BtnCategories).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)BtnProducts).EndInit();
+            ((System.ComponentModel.ISupportInitialize)BtnProviders).EndInit();
             ResumeLayout(false);
         }
 
@@ -99,5 +141,8 @@
         private Button BtnPayMode;
         private PictureBox pictureBox1;
         private Button BtnExit;
+        private PictureBox BtnCategories;
+        private PictureBox BtnProviders;
+        private PictureBox BtnProducts;
     }
 }

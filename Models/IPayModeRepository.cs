@@ -14,5 +14,4 @@ namespace Supermarket_MVP.Models
         IEnumerable<PayModeModel> GetAll();
         IEnumerable<PayModeModel> GetByValue(string value);
     }
-
 }

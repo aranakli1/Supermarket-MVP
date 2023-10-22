@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Supermarket_MVP.Views
 {
-    internal interface ICategoriesView
+    internal interface IProvidersView
     {
-        string CategoriesId { get; set; }
-        string CategoriesName { get; set; }
-        string CategoriesObservations { get; set; }
+        int ProviderId { get; set; }
+        string ProviderDocNum { get; set; }
+        string ProviderName {get; set; }
+        string ProviderAddress { get; set; }
+        string ProvidereMail { get; set; }
 
         string SearchValue { get; set; }
         bool IsEdit { get; set; }
@@ -24,7 +26,7 @@ namespace Supermarket_MVP.Views
         event EventHandler SaveEvent;
         event EventHandler CancelEvent;
 
-        void SetCategoriesListBildingSource(BindingSource categoriesList);
+        void SetPayModelListBildingSource(BindingSource providersList);
         void Show();
     }
 }

@@ -18,17 +18,48 @@ namespace Supermarket_MVP._Repositories
         }
         public void Add(CategoriesModel categoriesModel)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "INSERT INTO Categories VALUES (@name, @observation)";
+                command.Parameters.Add("@name", SqlDbType.NVarChar).Value = categoriesModel.CatName;
+                command.Parameters.Add("@observation", SqlDbType.NVarChar).Value = categoriesModel.CatDescription;
+                command.ExecuteNonQuery();
+            };
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "DELETE FROM Categories WHERE Category_Id = @id";
+                command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                command.ExecuteNonQuery();
+            }
+            ;
         }
 
         public void Edit(CategoriesModel categoriesModel)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = @"UPDATE Categories
+                                        SET Category_Name = @name,
+                                        Category_Observation = @observation
+                                        WHERE Category_Id = @id";
+                command.Parameters.Add("@name", SqlDbType.NVarChar).Value = categoriesModel.CatName;
+                command.Parameters.Add("@observation", SqlDbType.NVarChar).Value = categoriesModel.CatDescription;
+                command.Parameters.Add("@id", SqlDbType.Int).Value = categoriesModel.CatId;
+                command.ExecuteNonQuery();
+            }
         }
 
         public IEnumerable<CategoriesModel> GetAll()
@@ -39,7 +70,7 @@ namespace Supermarket_MVP._Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "SELECT * FROM Categories ORDER BY Categories_Id DESC";
+                command.CommandText = "SELECT * FROM Categories ORDER BY Category_Id DESC";
                 using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
@@ -47,7 +78,7 @@ namespace Supermarket_MVP._Repositories
                         var categoriesModel = new CategoriesModel();
                         categoriesModel.CatId = (int)reader["Category_Id"];
                         categoriesModel.CatName = reader["Category_Name"].ToString();
-                        categoriesModel.CatDescription = reader["Category_Descripcion"].ToString();
+                        categoriesModel.CatDescription = reader["Category_Description"].ToString();
                         categoriesList.Add(categoriesModel);
                     }
                 }
@@ -57,7 +88,32 @@ namespace Supermarket_MVP._Repositories
 
         public IEnumerable<CategoriesModel> GetByValue(string value)
         {
-            throw new NotImplementedException();
+            var categoriesList = new List<CategoriesModel>();
+            int categoriesId = int.TryParse(value, out _) ? Convert.ToInt32(value) : 0;
+            string categoriesName = value;
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = @"SELECT * FROM Categories
+                                        WHERE Category_Id=@id or Category_Name LIKE @name+ '%'
+                                        ORDER BY Category_Id DESC";
+                command.Parameters.Add("@id", SqlDbType.Int).Value = categoriesId;
+                command.Parameters.Add("@name", SqlDbType.NVarChar).Value = categoriesName;
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var categoriesModel = new CategoriesModel();
+                        categoriesModel.CatId = (int)reader["Category_Id"];
+                        categoriesModel.CatName = reader["Category_Name"].ToString();
+                        categoriesModel.CatDescription = reader["Category_Description"].ToString();
+                        categoriesList.Add(categoriesModel);
+                    }
+                }
+            }
+            return categoriesList;
         }
     }
 }

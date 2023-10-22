@@ -82,7 +82,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(157, 39);
+            label1.Location = new Point(134, 40);
             label1.Name = "label1";
             label1.Size = new Size(197, 41);
             label1.TabIndex = 0;
@@ -183,6 +183,7 @@
             // 
             DgCategories.AllowUserToAddRows = false;
             DgCategories.AllowUserToDeleteRows = false;
+            DgCategories.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgCategories.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DgCategories.Location = new Point(3, 59);
             DgCategories.Name = "DgCategories";

@@ -1,0 +1,382 @@
+﻿namespace Supermarket_MVP.Views
+{
+    partial class ProvidersView
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            panel1 = new Panel();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
+            tabControl1 = new TabControl();
+            tabPageProvidersList = new TabPage();
+            tabPageProvidersDetail = new TabPage();
+            BtnClose = new Button();
+            BtnDelete = new Button();
+            BtnEdit = new Button();
+            BtnNew = new Button();
+            BtnSearch = new Button();
+            label2 = new Label();
+            TxtSearch = new TextBox();
+            DgProviders = new DataGridView();
+            BtnCancel = new Button();
+            BtnSave = new Button();
+            label3 = new Label();
+            TxtProviderId = new TextBox();
+            label4 = new Label();
+            TxtDocNum = new TextBox();
+            label5 = new Label();
+            TxtProviderName = new TextBox();
+            label6 = new Label();
+            TxtProviderAddress = new TextBox();
+            label7 = new Label();
+            TxtProviderPhoneNum = new TextBox();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            tabControl1.SuspendLayout();
+            tabPageProvidersList.SuspendLayout();
+            tabPageProvidersDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)DgProviders).BeginInit();
+            SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(label1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(800, 125);
+            panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(134, 43);
+            label1.Name = "label1";
+            label1.Size = new Size(184, 41);
+            label1.TabIndex = 0;
+            label1.Text = "PROVIDERS";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.providers;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Location = new Point(3, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(125, 119);
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            // 
+            // tabControl1
+            // 
+            tabControl1.Controls.Add(tabPageProvidersList);
+            tabControl1.Controls.Add(tabPageProvidersDetail);
+            tabControl1.Dock = DockStyle.Fill;
+            tabControl1.Location = new Point(0, 125);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(800, 325);
+            tabControl1.TabIndex = 1;
+            // 
+            // tabPageProvidersList
+            // 
+            tabPageProvidersList.Controls.Add(DgProviders);
+            tabPageProvidersList.Controls.Add(TxtSearch);
+            tabPageProvidersList.Controls.Add(label2);
+            tabPageProvidersList.Controls.Add(BtnSearch);
+            tabPageProvidersList.Controls.Add(BtnClose);
+            tabPageProvidersList.Controls.Add(BtnDelete);
+            tabPageProvidersList.Controls.Add(BtnEdit);
+            tabPageProvidersList.Controls.Add(BtnNew);
+            tabPageProvidersList.Location = new Point(4, 29);
+            tabPageProvidersList.Name = "tabPageProvidersList";
+            tabPageProvidersList.Padding = new Padding(3);
+            tabPageProvidersList.Size = new Size(792, 292);
+            tabPageProvidersList.TabIndex = 0;
+            tabPageProvidersList.Text = "Providers List";
+            tabPageProvidersList.UseVisualStyleBackColor = true;
+            // 
+            // tabPageProvidersDetail
+            // 
+            tabPageProvidersDetail.Controls.Add(TxtProviderPhoneNum);
+            tabPageProvidersDetail.Controls.Add(label7);
+            tabPageProvidersDetail.Controls.Add(TxtProviderAddress);
+            tabPageProvidersDetail.Controls.Add(label6);
+            tabPageProvidersDetail.Controls.Add(TxtProviderName);
+            tabPageProvidersDetail.Controls.Add(label5);
+            tabPageProvidersDetail.Controls.Add(TxtDocNum);
+            tabPageProvidersDetail.Controls.Add(label4);
+            tabPageProvidersDetail.Controls.Add(TxtProviderId);
+            tabPageProvidersDetail.Controls.Add(label3);
+            tabPageProvidersDetail.Controls.Add(BtnCancel);
+            tabPageProvidersDetail.Controls.Add(BtnSave);
+            tabPageProvidersDetail.Location = new Point(4, 29);
+            tabPageProvidersDetail.Name = "tabPageProvidersDetail";
+            tabPageProvidersDetail.Padding = new Padding(3);
+            tabPageProvidersDetail.Size = new Size(792, 292);
+            tabPageProvidersDetail.TabIndex = 1;
+            tabPageProvidersDetail.Text = "Provider Detail";
+            tabPageProvidersDetail.UseVisualStyleBackColor = true;
+            // 
+            // BtnClose
+            // 
+            BtnClose.AccessibleRole = AccessibleRole.None;
+            BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnClose.Image = Properties.Resources.cerrar;
+            BtnClose.Location = new Point(698, 235);
+            BtnClose.Name = "BtnClose";
+            BtnClose.Size = new Size(88, 53);
+            BtnClose.TabIndex = 11;
+            BtnClose.UseVisualStyleBackColor = true;
+            // 
+            // BtnDelete
+            // 
+            BtnDelete.AccessibleRole = AccessibleRole.None;
+            BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnDelete.Image = Properties.Resources.delete;
+            BtnDelete.Location = new Point(698, 176);
+            BtnDelete.Name = "BtnDelete";
+            BtnDelete.Size = new Size(88, 53);
+            BtnDelete.TabIndex = 10;
+            BtnDelete.UseVisualStyleBackColor = true;
+            // 
+            // BtnEdit
+            // 
+            BtnEdit.AccessibleRole = AccessibleRole.None;
+            BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnEdit.Image = Properties.Resources.edit;
+            BtnEdit.Location = new Point(698, 117);
+            BtnEdit.Name = "BtnEdit";
+            BtnEdit.Size = new Size(88, 53);
+            BtnEdit.TabIndex = 9;
+            BtnEdit.UseVisualStyleBackColor = true;
+            // 
+            // BtnNew
+            // 
+            BtnNew.AccessibleRole = AccessibleRole.None;
+            BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnNew.Image = Properties.Resources._new;
+            BtnNew.Location = new Point(698, 58);
+            BtnNew.Name = "BtnNew";
+            BtnNew.Size = new Size(88, 53);
+            BtnNew.TabIndex = 8;
+            BtnNew.UseVisualStyleBackColor = true;
+            // 
+            // BtnSearch
+            // 
+            BtnSearch.Image = Properties.Resources.search_small;
+            BtnSearch.Location = new Point(654, 11);
+            BtnSearch.Name = "BtnSearch";
+            BtnSearch.Size = new Size(38, 42);
+            BtnSearch.TabIndex = 12;
+            BtnSearch.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(3, 3);
+            label2.Name = "label2";
+            label2.Size = new Size(125, 20);
+            label2.TabIndex = 13;
+            label2.Text = "Search Providers";
+            // 
+            // TxtSearch
+            // 
+            TxtSearch.Location = new Point(6, 26);
+            TxtSearch.Name = "TxtSearch";
+            TxtSearch.Size = new Size(642, 27);
+            TxtSearch.TabIndex = 14;
+            // 
+            // DgProviders
+            // 
+            DgProviders.AllowUserToAddRows = false;
+            DgProviders.AllowUserToDeleteRows = false;
+            DgProviders.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DgProviders.Location = new Point(6, 59);
+            DgProviders.Name = "DgProviders";
+            DgProviders.ReadOnly = true;
+            DgProviders.RowHeadersWidth = 51;
+            DgProviders.RowTemplate.Height = 29;
+            DgProviders.Size = new Size(686, 225);
+            DgProviders.TabIndex = 15;
+            // 
+            // BtnCancel
+            // 
+            BtnCancel.Image = Properties.Resources.cancel;
+            BtnCancel.Location = new Point(244, 230);
+            BtnCancel.Name = "BtnCancel";
+            BtnCancel.Size = new Size(124, 56);
+            BtnCancel.TabIndex = 9;
+            BtnCancel.UseVisualStyleBackColor = true;
+            // 
+            // BtnSave
+            // 
+            BtnSave.Image = Properties.Resources.save;
+            BtnSave.Location = new Point(3, 230);
+            BtnSave.Name = "BtnSave";
+            BtnSave.Size = new Size(124, 56);
+            BtnSave.TabIndex = 8;
+            BtnSave.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(6, 3);
+            label3.Name = "label3";
+            label3.Size = new Size(86, 20);
+            label3.TabIndex = 10;
+            label3.Text = "Provider Id";
+            // 
+            // TxtProviderId
+            // 
+            TxtProviderId.Location = new Point(8, 26);
+            TxtProviderId.Name = "TxtProviderId";
+            TxtProviderId.Size = new Size(178, 27);
+            TxtProviderId.TabIndex = 11;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(452, 3);
+            label4.Name = "label4";
+            label4.Size = new Size(207, 20);
+            label4.TabIndex = 12;
+            label4.Text = "Provider Document Number";
+            // 
+            // TxtDocNum
+            // 
+            TxtDocNum.Location = new Point(454, 26);
+            TxtDocNum.Name = "TxtDocNum";
+            TxtDocNum.Size = new Size(205, 27);
+            TxtDocNum.TabIndex = 13;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(6, 56);
+            label5.Name = "label5";
+            label5.Size = new Size(114, 20);
+            label5.TabIndex = 14;
+            label5.Text = "Provider Name";
+            // 
+            // TxtProviderName
+            // 
+            TxtProviderName.Location = new Point(6, 79);
+            TxtProviderName.Name = "TxtProviderName";
+            TxtProviderName.Size = new Size(436, 27);
+            TxtProviderName.TabIndex = 15;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(8, 109);
+            label6.Name = "label6";
+            label6.Size = new Size(129, 20);
+            label6.TabIndex = 16;
+            label6.Text = "Provider Address";
+            // 
+            // TxtProviderAddress
+            // 
+            TxtProviderAddress.Location = new Point(8, 132);
+            TxtProviderAddress.Name = "TxtProviderAddress";
+            TxtProviderAddress.Size = new Size(436, 27);
+            TxtProviderAddress.TabIndex = 17;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(8, 162);
+            label7.Name = "label7";
+            label7.Size = new Size(178, 20);
+            label7.TabIndex = 18;
+            label7.Text = "Provider Phone Number";
+            // 
+            // TxtProviderPhoneNum
+            // 
+            TxtProviderPhoneNum.Location = new Point(12, 185);
+            TxtProviderPhoneNum.Name = "TxtProviderPhoneNum";
+            TxtProviderPhoneNum.Size = new Size(174, 27);
+            TxtProviderPhoneNum.TabIndex = 19;
+            // 
+            // ProvidersView
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(tabControl1);
+            Controls.Add(panel1);
+            Name = "ProvidersView";
+            Text = "Providers Management";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            tabControl1.ResumeLayout(false);
+            tabPageProvidersList.ResumeLayout(false);
+            tabPageProvidersList.PerformLayout();
+            tabPageProvidersDetail.ResumeLayout(false);
+            tabPageProvidersDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)DgProviders).EndInit();
+            ResumeLayout(false);
+        }
+
+        #endregion
+
+        private Panel panel1;
+        private PictureBox pictureBox1;
+        private Label label1;
+        private TabControl tabControl1;
+        private TabPage tabPageProvidersList;
+        private TabPage tabPageProvidersDetail;
+        private Button BtnClose;
+        private Button BtnDelete;
+        private Button BtnEdit;
+        private Button BtnNew;
+        private Button BtnSearch;
+        private TextBox TxtSearch;
+        private Label label2;
+        private DataGridView DgProviders;
+        private Button BtnCancel;
+        private Button BtnSave;
+        private TextBox TxtProviderAddress;
+        private Label label6;
+        private TextBox TxtProviderName;
+        private Label label5;
+        private TextBox TxtDocNum;
+        private Label label4;
+        private TextBox TxtProviderId;
+        private Label label3;
+        private TextBox TxtProviderPhoneNum;
+        private Label label7;
+    }
+}
