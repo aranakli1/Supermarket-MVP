@@ -121,7 +121,6 @@ namespace Supermarket_MVP.Presenters
                 view.Message = "Error. An Error ocurred, could no delete pay mode";
             }
         }
-
         private void CancelAction(object? sender, EventArgs e)
         {
             throw new NotImplementedException();

@@ -29,7 +29,6 @@ namespace Supermarket_MVP._Repositories
                 command.ExecuteNonQuery();
             };
         }
-
         public void Delete(int id)
         {
             using (var connection = new SqlConnection(connectionString))
@@ -40,10 +39,8 @@ namespace Supermarket_MVP._Repositories
                 command.CommandText = "DELETE FROM Categories WHERE Category_Id = @id";
                 command.Parameters.Add("@id", SqlDbType.Int).Value = id;
                 command.ExecuteNonQuery();
-            }
-            ;
+            };
         }
-
         public void Edit(CategoriesModel categoriesModel)
         {
             using (var connection = new SqlConnection(connectionString))
@@ -61,7 +58,6 @@ namespace Supermarket_MVP._Repositories
                 command.ExecuteNonQuery();
             }
         }
-
         public IEnumerable<CategoriesModel> GetAll()
         {
             var categoriesList = new List<CategoriesModel>();

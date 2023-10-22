@@ -29,7 +29,6 @@ namespace Supermarket_MVP._Repositories
                 command.ExecuteNonQuery();
             };
         }
-
         public void Delete(int id)
         {
             using (var connection = new SqlConnection(connectionString))
@@ -40,10 +39,8 @@ namespace Supermarket_MVP._Repositories
                 command.CommandText = "DELETE FROM PayMode WHERE Pay_Mode_Id = @id";
                 command.Parameters.Add("@id", SqlDbType.Int).Value = id;
                 command.ExecuteNonQuery();
-            }
-            ;
+            };
         }
-
         public void Edit(PayModeModel payModeModel)
         {
             using (var connection = new SqlConnection(connectionString))
@@ -61,7 +58,6 @@ namespace Supermarket_MVP._Repositories
                 command.ExecuteNonQuery();
             }
         }
-
         public IEnumerable<PayModeModel> GetAll()
         {
             var payModeList = new List<PayModeModel>();
@@ -85,7 +81,6 @@ namespace Supermarket_MVP._Repositories
             }
             return payModeList;
         }
-
         public IEnumerable<PayModeModel> GetByValue(string value)
         {
             var payModeList = new List<PayModeModel>();
