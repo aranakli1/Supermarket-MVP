@@ -37,7 +37,6 @@ namespace Supermarket_MVP.Presenters
             payModeList = repository.GetAll();
             payModeBindingSource.DataSource = payModeList;
         }
-
         private void SearchPayMode(object? sender, EventArgs e)
         {
             bool emptyValue = string.IsNullOrWhiteSpace(this.view.SearchValue);
@@ -51,7 +50,6 @@ namespace Supermarket_MVP.Presenters
             }
             payModeBindingSource.DataSource = payModeList;
         }
-
         private void AddNewPayMode(object? sender, EventArgs e)
         {
             view.IsEdit = false;

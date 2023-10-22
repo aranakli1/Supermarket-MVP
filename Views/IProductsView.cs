@@ -8,11 +8,11 @@ namespace Supermarket_MVP.Views
 {
     internal interface IProductsView
     {
-        int ProductId { get; set; }
+        string ProductId { get; set; }
         string ProductName { get; set; }
-        int ProductPrice { get; set; }
-        int ProductStock { get; set; }
-        int ProductCatId { get; set; }
+        string ProductPrice { get; set; }
+        string ProductStock { get; set; }
+        string ProductCatId { get; set; }
 
         string SearchValue { get; set; }
         bool IsEdit { get; set; }

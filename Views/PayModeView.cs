@@ -24,7 +24,6 @@ namespace Supermarket_MVP.Views
             tabControl1.TabPages.Remove(tabPagePayModeDetail);
             BtnClose.Click += delegate { this.Close(); };
         }
-
         private void AssociateAndRaiseViewEvents()
         {
             // Boton Buscar, llamado a SearchEvent cuando hay click en BtnSearch
@@ -79,12 +78,10 @@ namespace Supermarket_MVP.Views
                 }
             };
         }
-
         private void BtnSearch_Click(object? sender, EventArgs e)
         {
             throw new NotImplementedException();
         }
-
         public string PayModeId
         {
             get { return TxtPayModeId.Text; }
@@ -120,7 +117,6 @@ namespace Supermarket_MVP.Views
             get { return message; }
             set { message = value; }
         }
-
         public event EventHandler SearchEvent;
         public event EventHandler AddNewEvent;
         public event EventHandler EditEvent;
