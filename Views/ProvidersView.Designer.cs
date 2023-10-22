@@ -158,6 +158,7 @@
             // 
             // BtnSearch
             // 
+            BtnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnSearch.Image = Properties.Resources.search_small;
             BtnSearch.Location = new Point(654, 11);
             BtnSearch.Name = "BtnSearch";
@@ -322,8 +323,11 @@
             // 
             TxtProviderId.Location = new Point(8, 26);
             TxtProviderId.Name = "TxtProviderId";
+            TxtProviderId.ReadOnly = true;
             TxtProviderId.Size = new Size(178, 27);
             TxtProviderId.TabIndex = 11;
+            TxtProviderId.Text = "0";
+            TxtProviderId.TextAlign = HorizontalAlignment.Right;
             // 
             // label3
             // 

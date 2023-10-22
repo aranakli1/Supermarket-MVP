@@ -98,7 +98,7 @@ namespace Supermarket_MVP.Presenters
             view.CategoriesName = "";
             view.CategoriesDescription = "";
         }
-        private void CancelAction()
+        private void CancelAction(object? sender, EventArgs e)
         {
             CleanViewFields();
         }
@@ -119,10 +119,6 @@ namespace Supermarket_MVP.Presenters
                 view.IsSuccessful = false;
                 view.Message = "Error. An Error ocurred, could no delete category";
             }
-        }
-        private void CancelAction(object? sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
     }
 }

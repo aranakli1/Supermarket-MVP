@@ -197,6 +197,7 @@
             // 
             // BtnSearch
             // 
+            BtnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnSearch.BackgroundImage = Properties.Resources.search_small;
             BtnSearch.BackgroundImageLayout = ImageLayout.Zoom;
             BtnSearch.Location = new Point(650, 22);
@@ -261,8 +262,11 @@
             // 
             TxtCategoryId.Location = new Point(6, 26);
             TxtCategoryId.Name = "TxtCategoryId";
+            TxtCategoryId.ReadOnly = true;
             TxtCategoryId.Size = new Size(125, 27);
             TxtCategoryId.TabIndex = 3;
+            TxtCategoryId.Text = "0";
+            TxtCategoryId.TextAlign = HorizontalAlignment.Right;
             // 
             // label5
             // 

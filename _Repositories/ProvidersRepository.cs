@@ -25,6 +25,7 @@ namespace Supermarket_MVP._Repositories
                 command.Connection = connection;
                 command.CommandText = @"INSERT INTO Providers 
                                         VALUES (@docNum, @name, @address, @phoneNum, @eMail)";
+                command.Parameters.Add("@docNum", SqlDbType.NVarChar).Value = providersModel.ProviderDocNum;
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = providersModel.ProviderName;
                 command.Parameters.Add("@address", SqlDbType.NVarChar).Value = providersModel.ProviderAddress;
                 command.Parameters.Add("@phoneNum", SqlDbType.NVarChar).Value = providersModel.ProviderPhoneNum;
@@ -56,12 +57,14 @@ namespace Supermarket_MVP._Repositories
                                             Provider_Name = @name,
                                             Provider_Address = @address,
                                             Provider_PhoneNum = @phoneNum,
-                                            Provider_eMail = @eMail,
+                                            Provider_eMail = @eMail
                                         WHERE Provider_Id = @id";
+                command.Parameters.Add("@docNum", SqlDbType.NVarChar).Value = providersModel.ProviderDocNum;
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = providersModel.ProviderName;
                 command.Parameters.Add("@address", SqlDbType.NVarChar).Value = providersModel.ProviderAddress;
                 command.Parameters.Add("@phoneNum", SqlDbType.NVarChar).Value = providersModel.ProviderPhoneNum;
                 command.Parameters.Add("@eMail", SqlDbType.NVarChar).Value = providersModel.ProvidereMail;
+                command.Parameters.Add("@id", SqlDbType.Int).Value = providersModel.ProviderId;
                 command.ExecuteNonQuery();
             }
         }

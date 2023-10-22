@@ -23,9 +23,9 @@ namespace Supermarket_MVP._Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO Categories VALUES (@name, @observation)";
+                command.CommandText = "INSERT INTO Categories VALUES (@name, @description)";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = categoriesModel.CatName;
-                command.Parameters.Add("@observation", SqlDbType.NVarChar).Value = categoriesModel.CatDescription;
+                command.Parameters.Add("@description", SqlDbType.NVarChar).Value = categoriesModel.CatDescription;
                 command.ExecuteNonQuery();
             };
         }
@@ -50,10 +50,10 @@ namespace Supermarket_MVP._Repositories
                 command.Connection = connection;
                 command.CommandText = @"UPDATE Categories
                                         SET Category_Name = @name,
-                                        Category_Observation = @observation
+                                        Category_Description = @description
                                         WHERE Category_Id = @id";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = categoriesModel.CatName;
-                command.Parameters.Add("@observation", SqlDbType.NVarChar).Value = categoriesModel.CatDescription;
+                command.Parameters.Add("@description", SqlDbType.NVarChar).Value = categoriesModel.CatDescription;
                 command.Parameters.Add("@id", SqlDbType.Int).Value = categoriesModel.CatId;
                 command.ExecuteNonQuery();
             }

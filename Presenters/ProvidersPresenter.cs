@@ -107,7 +107,7 @@ namespace Supermarket_MVP.Presenters
             view.ProviderPhoneNum = "";
             view.ProvidereMail = "";
         }
-        private void CancelAction()
+        private void CancelAction(object? sender, EventArgs e)
         {
             CleanViewFields();
         }
@@ -126,12 +126,8 @@ namespace Supermarket_MVP.Presenters
             catch (Exception ex)
             {
                 view.IsSuccessful = false;
-                view.Message = "Error. An Error ocurred, could no delete pay mode";
+                view.Message = "Error. An Error ocurred, could no delete provider";
             }
-        }
-        private void CancelAction(object? sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
     }
 }

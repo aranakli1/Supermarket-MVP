@@ -57,6 +57,7 @@ namespace Supermarket_MVP._Repositories
                                             Product_Stock = @stock,
                                             Product_Cat_Id = @catId
                                         WHERE Product_Id = @id";
+                command.Parameters.Add("@id", SqlDbType.Int).Value = productsModel.ProductId;
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = productsModel.ProductName;
                 command.Parameters.Add("@price", SqlDbType.Int).Value = productsModel.ProductPrice;
                 command.Parameters.Add("@stock", SqlDbType.Int).Value = productsModel.ProductStock;

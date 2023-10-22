@@ -29,12 +29,12 @@ namespace Supermarket_MVP.Models
 
         [DisplayName("Provider Phone Number")]
         [Required(ErrorMessage = "Privider Phone Number is required")]
-        [StringLength(15, MinimumLength = 7, ErrorMessage = "Provider Phone Number must be between 7 and 15 characters")]
+        [StringLength(15, MinimumLength = 5, ErrorMessage = "Provider Phone Number must be between 5 and 15 characters")]
         public string ProviderPhoneNum { get; set; }
 
         [DisplayName("Provider eMail")]
         [Required(ErrorMessage = "Privider eMail is required")]
-        [StringLength(20, MinimumLength = 10, ErrorMessage = "Provider eMail must be between 7 and 15 characters")]
+        [StringLength(30, MinimumLength = 5, ErrorMessage = "Provider eMail must be between 5 and 30 characters")]
         public string ProvidereMail { get; set; }
     }
 }

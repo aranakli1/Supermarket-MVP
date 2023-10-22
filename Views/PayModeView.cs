@@ -41,6 +41,8 @@ namespace Supermarket_MVP.Views
                 AddNewEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1.TabPages.Remove(tabPagePayModeList);
                 tabControl1.TabPages.Add(tabPagePayModeDetail);
+                TxtPayModeName.Focus();
+                TxtPayModeName.DeselectAll();
                 tabPagePayModeDetail.Text = "Add new pay mode";
             };
             BtnEdit.Click += delegate
@@ -48,6 +50,8 @@ namespace Supermarket_MVP.Views
                 EditEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1.TabPages.Remove(tabPagePayModeList);
                 tabControl1.TabPages.Add(tabPagePayModeDetail);
+                TxtPayModeName.Focus();
+                TxtPayModeName.DeselectAll();
                 tabPagePayModeDetail.Text = "Edit new pay mode";
             };
             BtnSave.Click += delegate
@@ -77,10 +81,6 @@ namespace Supermarket_MVP.Views
                     MessageBox.Show(Message);
                 }
             };
-        }
-        private void BtnSearch_Click(object? sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
         public string PayModeId
         {

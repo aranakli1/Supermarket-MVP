@@ -41,6 +41,8 @@ namespace Supermarket_MVP.Views
                 AddNewEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1.TabPages.Remove(tabPageProvidersList);
                 tabControl1.TabPages.Add(tabPageProvidersDetail);
+                TxtProviderDocNum.Focus();
+                TxtProviderDocNum.DeselectAll();
                 tabPageProvidersDetail.Text = "Add new pay mode";
             };
             BtnEdit.Click += delegate
@@ -48,6 +50,8 @@ namespace Supermarket_MVP.Views
                 EditEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1.TabPages.Remove(tabPageProvidersList);
                 tabControl1.TabPages.Add(tabPageProvidersDetail);
+                TxtProviderDocNum.Focus();
+                TxtProviderDocNum.DeselectAll();
                 tabPageProvidersDetail.Text = "Edit new Providers";
             };
             BtnSave.Click += delegate

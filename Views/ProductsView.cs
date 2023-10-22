@@ -41,6 +41,8 @@ namespace Supermarket_MVP.Views
                 AddNewEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1.TabPages.Remove(tabPageProductsList);
                 tabControl1.TabPages.Add(tabPageProductsDetail);
+                TxtProductName.Focus();
+                TxtProductName.DeselectAll();
                 tabPageProductsDetail.Text = "Add new Product";
             };
             BtnEdit.Click += delegate
@@ -48,6 +50,8 @@ namespace Supermarket_MVP.Views
                 EditEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1.TabPages.Remove(tabPageProductsList);
                 tabControl1.TabPages.Add(tabPageProductsDetail);
+                TxtProductName.Focus();
+                TxtProductName.DeselectAll();
                 tabPageProductsDetail.Text = "Edit new Products";
             };
             BtnSave.Click += delegate
