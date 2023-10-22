@@ -42,6 +42,8 @@
             BtnEdit = new Button();
             BtnNew = new Button();
             tabPageProvidersDetail = new TabPage();
+            TxtProvidereMail = new TextBox();
+            label8 = new Label();
             TxtProviderPhoneNum = new TextBox();
             label7 = new Label();
             TxtProviderAddress = new TextBox();
@@ -54,8 +56,6 @@
             label3 = new Label();
             BtnCancel = new Button();
             BtnSave = new Button();
-            label8 = new Label();
-            TxtProvidereMail = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
@@ -127,6 +127,8 @@
             // 
             DgProviders.AllowUserToAddRows = false;
             DgProviders.AllowUserToDeleteRows = false;
+            DgProviders.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            DgProviders.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgProviders.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DgProviders.Location = new Point(6, 59);
             DgProviders.Name = "DgProviders";
@@ -138,6 +140,7 @@
             // 
             // TxtSearch
             // 
+            TxtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             TxtSearch.Location = new Point(6, 26);
             TxtSearch.Name = "TxtSearch";
             TxtSearch.Size = new Size(642, 27);
@@ -229,6 +232,23 @@
             tabPageProvidersDetail.TabIndex = 1;
             tabPageProvidersDetail.Text = "Provider Detail";
             tabPageProvidersDetail.UseVisualStyleBackColor = true;
+            // 
+            // TxtProvidereMail
+            // 
+            TxtProvidereMail.Location = new Point(6, 185);
+            TxtProvidereMail.Name = "TxtProvidereMail";
+            TxtProvidereMail.Size = new Size(436, 27);
+            TxtProvidereMail.TabIndex = 21;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(8, 162);
+            label8.Name = "label8";
+            label8.Size = new Size(110, 20);
+            label8.TabIndex = 20;
+            label8.Text = "Provider eMail";
             // 
             // TxtProviderPhoneNum
             // 
@@ -332,23 +352,6 @@
             BtnSave.Size = new Size(124, 56);
             BtnSave.TabIndex = 8;
             BtnSave.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(8, 162);
-            label8.Name = "label8";
-            label8.Size = new Size(110, 20);
-            label8.TabIndex = 20;
-            label8.Text = "Provider eMail";
-            // 
-            // TxtProvidereMail
-            // 
-            TxtProvidereMail.Location = new Point(6, 185);
-            TxtProvidereMail.Name = "TxtProvidereMail";
-            TxtProvidereMail.Size = new Size(436, 27);
-            TxtProvidereMail.TabIndex = 21;
             // 
             // ProvidersView
             // 

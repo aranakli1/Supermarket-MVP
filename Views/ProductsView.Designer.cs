@@ -125,6 +125,8 @@
             // 
             DgProducts.AllowUserToAddRows = false;
             DgProducts.AllowUserToDeleteRows = false;
+            DgProducts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            DgProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DgProducts.Location = new Point(6, 59);
             DgProducts.Name = "DgProducts";
@@ -189,6 +191,7 @@
             // 
             // TxtSearch
             // 
+            TxtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             TxtSearch.Location = new Point(6, 26);
             TxtSearch.Name = "TxtSearch";
             TxtSearch.PlaceholderText = "Data to search";

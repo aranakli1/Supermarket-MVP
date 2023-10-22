@@ -19,6 +19,8 @@ namespace Supermarket_MVP.Presenters
             this.sqlConnectionString = sqlConnectionString;
             this.mainView.ShowPayModeView += ShowPayModeView;
             this.mainView.ShowCategoriesView += ShowCategoriesView;
+            this.mainView.ShowProductView += ShowProductView;
+            this.mainView.ShowProviderView += ShowProviderView;
         }
         private void ShowPayModeView(object? sender, EventArgs e)
         {
@@ -31,6 +33,18 @@ namespace Supermarket_MVP.Presenters
             ICategoriesView view = CategoriesView.GetInstance((MainView)mainView);
             ICategoriesRepository repository = new CategoriesRepository(sqlConnectionString);
             new CategoriesPresenter(view, repository);
+        }
+        private void ShowProductView(object? sender, EventArgs e)
+        {
+            IProductsView view = ProductsView.GetInstance((MainView)mainView);
+            IProductsRepository repository = new ProductsRepository(sqlConnectionString);
+            new ProductsPresenter(view, repository);
+        }
+        private void ShowProviderView(object? sender, EventArgs e)
+        {
+            IProvidersView view = ProvidersView.GetInstance((MainView)mainView);
+            IProvidersRepository repository = new ProvidersRepository(sqlConnectionString);
+            new ProvidersPresenter(view, repository);
         }
     }
 }
